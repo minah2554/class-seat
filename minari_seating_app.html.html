@@ -112,12 +112,12 @@ table.roster td.cx{width:52px;text-align:right}
 .bt-title img{width:30px;height:30px;object-fit:contain}
 .cols{display:flex;gap:12px;justify-content:center;align-items:stretch}
 .colblk{border:2px solid #111;flex:1 1 0;min-width:0;background:#fff;display:flex;flex-direction:column}
-.seat{border-bottom:2px solid #111;padding:4px 6px;text-align:center;display:flex;flex-direction:column;justify-content:center;background:#fff;position:relative}
+.seat{border-bottom:2px solid #111;padding:4px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#fff;position:relative;flex:1 1 0%;box-sizing:border-box;min-height:0}
 .colblk .seat:last-child{border-bottom:none}
-.seat .role{font-family:var(--pen);font-size:calc(var(--nm) * .78);line-height:1.15;color:#111;min-height:1em;word-break:keep-all;font-weight:600}
-.seat .nm{font-family:var(--juache);font-size:var(--nm);line-height:1.25;letter-spacing:-.01em;font-weight:bold}
-.seat.empty{background:#fff;padding:4px}
-.seat.empty .nm{color:#a0a5b0;font-family:var(--juache);font-size:calc(var(--nm) * .85);font-weight:normal;border:2px dashed #cbd5e1;border-radius:4px;padding:4px 2px;margin:2px 0;background:#fafafa;display:flex;align-items:center;justify-content:center;height:100%;box-sizing:border-box}
+.seat .role{font-family:var(--pen);font-size:calc(var(--nm) * .75);line-height:1.15;color:#111;min-height:1em;word-break:keep-all;font-weight:normal}
+.seat .nm{font-family:var(--juache);font-size:var(--nm);line-height:1.25;letter-spacing:-.01em;font-weight:normal}
+.seat.empty{background:#fff;padding:4px;box-sizing:border-box}
+.seat.empty .nm{color:#a0a5b0;font-family:var(--juache);font-size:calc(var(--nm) * .85);font-weight:normal;border:2px dashed #cbd5e1;border-radius:4px;padding:2px;margin:0;background:#fafafa;display:flex;align-items:center;justify-content:center;width:100%;height:100%;box-sizing:border-box}
 .seat.empty .role{display:none}
 .seat.pick{background:var(--point);box-shadow:inset 0 0 0 3px var(--point-deep)}
 .seat.pick2{background:#ffe0b2;box-shadow:inset 0 0 0 3px #ff9800}
@@ -126,7 +126,7 @@ table.roster td.cx{width:52px;text-align:right}
 .seat[draggable=true]{cursor:grab}
 .podium-row{display:flex;justify-content:center;align-items:center;margin-top:14px}
 .podium{font-family:var(--juache);font-size:18px;letter-spacing:.5em;text-indent:.5em;background:var(--point);border:2px solid #111;padding:6px 40px}
-.bnotice{font-family:var(--juache);font-size:16px;line-height:1.8;margin-top:12px;letter-spacing:-.01em;word-break:keep-all;font-weight:500}
+.bnotice{font-family:var(--juache);font-size:16px;line-height:1.8;margin-top:12px;letter-spacing:-.01em;word-break:keep-all;font-weight:normal}
 .bsign{font-family:var(--juache);font-size:15px;text-align:right;margin-top:6px}
 .wait{margin-top:12px;border:1px solid var(--line);border-radius:8px;padding:12px;background:#fbfbfc}
 .wait h3{margin:0 0 8px;font-size:13px;font-weight:700}
@@ -158,12 +158,12 @@ table.roster td.cx{width:52px;text-align:right}
   .boardbox{border:none;padding:0;border-radius:0}
   .board{border:2px solid #111;height:calc(210mm - 16mm);display:flex;flex-direction:column;box-sizing:border-box}
   .cols{flex:1;align-items:stretch}
-  .colblk{display:flex;flex-direction:column}
-  .seat.empty{border-bottom:2px solid #111 !important;padding:4px}
-  .colblk .seat.empty:last-child{border-bottom:none !important}
-  .seat.empty .nm{color:#a0a5b0;border:2px dashed #cbd5e1;background:#fafafa}
-  .seat.pick{background:#fff;box-shadow:none}
-  .seat.pick2{background:#fff;box-shadow:none}
+  .colblk{display:flex;flex-direction:column;flex:1}
+  .seat{flex:1 1 0% !important;min-height:0 !important;box-sizing:border-box !important}
+  .seat.empty{border-bottom:2px solid #111 !important;padding:4px !important;box-sizing:border-box !important}
+  .colblk .seat:last-child{border-bottom:none !important}
+  .seat.empty .nm{color:#a0a5b0;border:2px dashed #cbd5e1;background:#fafafa;font-weight:normal}
+  .seat.pick,.seat.pick2{background:#fff;box-shadow:none}
 }
 </style>
 </head>
